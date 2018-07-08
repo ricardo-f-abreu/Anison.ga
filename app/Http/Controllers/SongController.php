@@ -7,15 +7,22 @@ use Anison\Song;
 
 class SongController extends Controller
 {
+
+    // All songs
+
     public function index() {
         $song = Song::all();
         return view('songs')->with('song', $song);
     }
 
+    // Retrieve data for play page
+
     public function play($id) {
         $song = Song::find($id);
         return view('play')->with('song', $song);
     }
+
+    // Submitting songs
 
     public function submit(Request $request){
         $this->validate($request, [
@@ -39,7 +46,7 @@ class SongController extends Controller
         // Save song
         $songs->save();
 
-        // Redirect
+        // Redirect when done
         return redirect('/')->with('success2', 'The song has been added to the database!');
     }
 }

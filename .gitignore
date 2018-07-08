@@ -2,6 +2,7 @@ vendor/
 node_modules/
 npm-debug.log
 public/hot
+public/vendor
 storage/*.key
 .env.*.php
 .env.php

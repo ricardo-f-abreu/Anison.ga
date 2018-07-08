@@ -4,16 +4,14 @@
     <meta content="width=device-width,initial-scale=1,shrink-to-fit=no" name="viewport">
     <title>Add song - {{ setting('site.title') }}</title>
 </head>@include('inc.navbar')
-<br>
-<br>
-<h1>Add song</h1>
 
+<br><br><h1>Add song</h1>
 <body style="text-align: center;">
     <section class="py-5">
-        <div class="container">@if(count($errors) > 0)@foreach($errors->all() as $error)
-            <div class="alert alert-danger" <br>{{$error}}
-                <br>
-            </div>@endforeach @endif
+        <div class="container">
+            @if(count($errors) > 0) @foreach($errors->all() as $error)
+            <div class="alert alert-danger" <br>{{$error}}<br></div>
+            @endforeach @endif
             {!! Form::open(['url' => 'songs/new']) !!}
             <div class="form-row">
                 <div class="form-group col-md-4">{{Form::label('song', 'Song')}} {{Form::text('song', '', ['class' => 'form-control', 'placeholder' => 'Enter song title'])}}</div>

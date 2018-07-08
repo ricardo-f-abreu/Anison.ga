@@ -7,11 +7,15 @@ use Anison\Requests;
 
 class RequestController extends Controller
 {
+
+    // All requests
+
     public function index() {
         $requests = Requests::all();
-
         return view('requests')->with('requests', $requests);
     }
+
+    // Submitting requests
 
     public function submit(Request $request){
         $this->validate($request, [
@@ -29,7 +33,7 @@ class RequestController extends Controller
         // Save request
         $requests->save();
 
-        // Redirect
+        // Redirect when done
         return redirect('/')
                 ->with('success1', 'Your request has been received!')
                 ->with('inputsong', $request->input('song'))
