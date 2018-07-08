@@ -21,6 +21,7 @@ $requestamount = Requests::count();
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <a class="dropdown-item" href="<?= route('newRequest');?>">Request</a>
                     <a class="dropdown-item" href="<?= route('discord');?>">Discord</a>
+                    <a class="dropdown-item" href="<?= route('github');?>">GitHub</a>
                     <a class="dropdown-item" href="<?= route('paypal');?>">Donate</a>
                 </div>
             </li>

@@ -40,6 +40,12 @@ Route::group(['prefix' => 'admin'], function () {
 
 Route::get('/play/{id}', 'SongController@play')->name('play');
 
+Route::get('api', function() {
+    return Song::all();
+});
+
+Route::get('/api/{type}={id}', 'ApiController@api')->name('api');
+
 // External routes
 Route::get('/discord', function() {
     return Redirect::to('https://discord.gg/GUDK2GR');
@@ -49,8 +55,6 @@ Route::get('/paypal', function() {
     return Redirect::to('https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=EV4TQ37W8QXML');
 })->name('paypal');
 
-Route::get('api', function() {
-    return Song::all();
-});
-
-Route::get('/api/{type}={id}', 'ApiController@api')->name('api');
+Route::get('/github', function() {
+    return Redirect::to('https://github.com/Anison-Deterio/Anison.ga');
+})->name('github');
