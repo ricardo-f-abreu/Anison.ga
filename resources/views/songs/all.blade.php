@@ -11,7 +11,6 @@ $percentage = ($songamount * 100) / ($songamount + $requestamount);
         <div class="alert alert-success" role="alert">{{session('success1')}}{{session('success2')}}</div>
         <div class="card">@endif @if(session('success1'))
             <div class="card-header"><b>Received request:</b></div>
-            <img src={{$image}}></img>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item"><b>Song:</b> {{session('inputsong')}}</li>
                 <li class="list-group-item"><b>Artist:</b> {{session('inputanime')}}</li>
