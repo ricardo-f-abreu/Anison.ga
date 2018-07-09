@@ -6,9 +6,7 @@ include 'anilist.php';
 ?>
 
 <head>
-    <script src='{{ setting('site.url') }}storage/main.min.js'></script>
-    <link href='{{ setting('site.url') }}storage/main.min.css' rel='stylesheet'> @include('inc.jquerybs')
-    <link href='{{ setting('site.url') }}storage/player.min.css' rel='stylesheet'>
+    @include('inc.jquerybs')
     <meta content='width=device-width, initial-scale=1, shrink-to-fit=no' name='viewport'>
     <meta content='{{$song->artist}} - {{$song->song}}' property='og:title'>
     <meta content='{{$audiolink}}' property='og:audio'>
@@ -17,7 +15,7 @@ include 'anilist.php';
     <title>{{$song->artist}} - {{$song->song}}</title>
 </head>
 
-<body>
+<body class="play">
     @include('inc.navbar')
     <br><br><h1>@if(empty($song->artistid)){{$song->artist}} @else <a target="_blank" href="<?= $artistlink?>">{{$song->artist}}</a> @endif - {{$song->song}}</h1>
     <h3><a target="_blank" href="<?= $animelink?>">{{$song->anime}}</a></h3><br><br>
@@ -28,7 +26,7 @@ include 'anilist.php';
     </div>@endif<br>
 
     @notmobile
-    <button class="btn btn-outline-dark btn-lg btn-block round audio" type="button" data-toggle="collapse" data-target="#collapseInfo" aria-expanded="true" aria-controls="collapseInfo">Show/hide anime info</button>
+    <button class="btn btn-outline-dark btn-lg btn-block audio" type="button" data-toggle="collapse" data-target="#collapseInfo" aria-expanded="true" aria-controls="collapseInfo">Show/hide anime info</button>
     <div class="collapse" id="collapseInfo"><br>
         <div class="card audio text-center">
             <div class="card-header">Anime Info</div>

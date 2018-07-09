@@ -7,8 +7,7 @@ $percentage = ($songamount * 100) / ($songamount + $requestamount)
 ?>
 
 <head>
-    <script src="{{setting('site.url')}}storage/main.min.js"></script>
-    <link href="{{setting('site.url')}}storage/main.min.css" rel="stylesheet">@include('inc.jquerybs')
+    @include('inc.jquerybs')
     <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
     <title>Requests - {{setting('site.title')}}</title>
 </head>

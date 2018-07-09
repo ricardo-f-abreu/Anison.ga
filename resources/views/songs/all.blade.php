@@ -30,11 +30,8 @@ $percentage = ($songamount * 100) / ($songamount + $requestamount);
                     <br>Anime: <a href="https://anilist.co/anime/{{ $latestsong->animeid }}">{{ $latestsong->anime }}</a>
                     </p>
                 </div>
-            <a style="border:0px solid transparent; border-top:1px solid;" href="/play/{{$latestsong->id}}" class="card-footer btn-outline-dark btn btn-dark">Play</a>
+            <a style="border:0px solid transparent; border-top:1px solid; color: black;" href="/play/{{$latestsong->id}}" class="card-footer btn-outline-dark btn btn-dark">Play</a>
         </div><br>
-        <form><input class="round" id='myInput1' onkeyup='myFunction1()' placeholder='Search for anime..' type='text'></form>
-        <form><input class="round" id='myInput2' onkeyup='myFunction2()' placeholder='Search for songs..' type='text'></form>
-        <form><input class="round" id='myInput3' onkeyup='myFunction3()' placeholder='Search for artists..' type='text'></form> 
         <div class="progress"><div class="progress-bar" role="progressbar" style="width: <?= $percentage;?>%" aria-valuenow="<?= $percentage;?>" aria-valuemin="0" aria-valuemax="100"></div></div>
         <table id='myTable'>
             <tr class='header'>
