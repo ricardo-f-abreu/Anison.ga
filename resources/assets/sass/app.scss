@@ -1,6 +1,7 @@
 
 // Fonts
-@import url("https://fonts.googleapis.com/css?family=Raleway");
+@import url("https://fonts.googleapis.com/css?family=Product+Sans");
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
 
 // Variables
 @import "variables";
@@ -110,5 +111,17 @@ audio:nth-child(6) {
 }
 
 * {
-    text-align: center
+    text-align: center;
+}
+
+th,
+nav,
+.latestsong,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Montserrat;
 }
