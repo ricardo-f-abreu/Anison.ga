@@ -11,7 +11,7 @@ include 'anilist.php';
     <meta content='{{$song->artist}} - {{$song->song}}' property='og:title'>
     <meta content='{{$audiolink}}' property='og:audio'>
     <meta content='Anison.ga' property='og:site_name'>
-    <link rel=icon href='{{ setting('site.url') }}favicon.ico'>
+    <link rel=icon href='{{url('/')}}/favicon.ico'>
     <title>{{$song->artist}} - {{$song->song}}</title>
 </head>
 
