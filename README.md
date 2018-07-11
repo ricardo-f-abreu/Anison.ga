@@ -10,7 +10,7 @@
 - Run `composer install` or `php composer.phar install`
 - Run `php artisan key:generate` 
 - Run `php artisan migrate`
-- Go to localhost/phpmyadmin and insert some mock data into the songs table and the requests table
+- Go to localhost/phpmyadmin and insert [`songs.sql`](https://nofile.io/f/kMTdZ6fnzxk) and [`requests.sql`](https://nofile.io/f/VayOMgJ2B2K) into the database using phpMyAdmin
 - Go to localhost and everything should be working
 
 #### If for some reason your project stops working, run these commands again in the project folder:
