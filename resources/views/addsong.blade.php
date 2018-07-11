@@ -1,7 +1,7 @@
 <head>
     @include('inc.jquerybs')
     <meta content="width=device-width,initial-scale=1,shrink-to-fit=no" name="viewport">
-    <title>Add song - {{ setting('site.title') }}</title>
+    <title>Add song - {{config('app.name')}}</title>
 </head>@include('inc.navbar')
 
 <br><br><h1>Add song</h1>

@@ -9,7 +9,7 @@ $percentage = ($songamount * 100) / ($songamount + $requestamount)
 <head>
     @include('inc.jquerybs')
     <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
-    <title>Requests - {{setting('site.title')}}</title>
+    <title>Requests - {{config('app.name')}}</title>
 </head>
 
 @include('inc.navbar')

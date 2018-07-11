@@ -11,8 +11,11 @@
 - Run `php artisan key:generate` 
 - Run `php artisan migrate`
 - Go to localhost/phpmyadmin and insert [`songs.sql`](https://my.mixtape.moe/rxonjk.sql) and [`requests.sql`](https://my.mixtape.moe/ehdocm.sql) into the database using phpMyAdmin
+- Go to `[XAMPP installation folder]\apache\conf\extra` and edit the file `httpd-vhosts.conf`, change `DocumentRoot "[XAMPP installation folder]\htdocs"` into `DocumentRoot "[XAMPP installation folder]\htdocs\public"`
+- Run `php artisan serve`
 - Go to localhost and everything should be working
 
 #### If for some reason your project stops working, run these commands again in the project folder:
 - `composer install`
 - `php artisan migrate`
+- `php artisan serve`

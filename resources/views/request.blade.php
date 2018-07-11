@@ -1,7 +1,7 @@
 <head>
     @include('inc.jquerybs')
     <meta content="width=device-width,initial-scale=1,shrink-to-fit=no" name="viewport">
-    <title>Request - {{setting('site.title')}}</title>
+    <title>Request - {{config('app.name')}}</title>
 </head>@include('inc.navbar')
 
 <br><body style="text-align: center;">

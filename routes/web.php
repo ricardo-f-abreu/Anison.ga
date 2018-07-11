@@ -1,6 +1,6 @@
 <?php
 
-// Home/play page + Voyager routes
+// Home/play page routes
 
 Route::get('/', function() {
     $song = Anison\Song::all();
@@ -8,8 +8,6 @@ Route::get('/', function() {
 })->name('home');
 
 Route::get('/play/{id}', 'SongController@play')->name('play');
-
-Route::group(['prefix' => 'admin'], function () { Voyager::routes(); });
 
 // Songs routes
 
