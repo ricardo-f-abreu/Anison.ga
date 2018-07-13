@@ -17,9 +17,7 @@ class SocialAuthGoogleController extends Controller
     {
         try {
             
-            #$googleUser = Socialite::driver('google')->userFromToken($token);
-            $googleUser = \Socialite::driver('google')->user();
-            #$googleUser = Socialite::driver('google')->stateless()->user();
+            $googleUser = Socialite::driver('google')->user();
             $existUser = User::where('email',$googleUser->email)->first();
             
 
@@ -35,7 +33,7 @@ class SocialAuthGoogleController extends Controller
                 $user->save();
                 Auth::loginUsingId($user->id);
             }
-            return redirect()->to('/home');
+            return redirect()->to('/');
         } 
         catch (Exception $e) {
             return 'error';
