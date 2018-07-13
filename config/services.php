@@ -35,4 +35,11 @@ return [
         'secret' => env('STRIPE_SECRET'),
     ],
 
+
+    # for google login. This info is the OAuth client ID + secret
+    'google' => [
+        'client_id' => '475194032364-6bres0m3c11ost88c070atqco98vpmk5.apps.googleusercontent.com',
+        'client_secret' => 'pN6gWwcNZ3irqjirCk9yfxT4',
+        'redirect' => 'http://localhost:80/callback/google'],
+
 ];

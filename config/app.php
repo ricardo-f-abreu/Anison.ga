@@ -163,6 +163,8 @@ return [
         Anison\Providers\EventServiceProvider::class,
         Anison\Providers\RouteServiceProvider::class,
 
+        # Socialite package for laravel google integration
+        Laravel\Socialite\SocialiteServiceProvider::class,
     ],
 
     /*
@@ -214,6 +216,9 @@ return [
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
         'Analytics' => Spatie\Analytics\AnalyticsFacade::class,
+
+        # Socialite package for laravel google integration
+        'Socialite' => Laravel\Socialite\Facades\Socialite::class,
 
     ],
 

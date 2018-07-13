@@ -37,3 +37,11 @@ Route::get('/discord', function() { return Redirect::to('https://discord.gg/GUDK
 Route::get('/paypal', function() { return Redirect::to('https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=EV4TQ37W8QXML'); })->name('paypal');
 
 Route::get('/github', function() { return Redirect::to('https://github.com/Anison-Deterio/Anison.ga'); })->name('github');
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+# google login
+Auth::routes();
+Route::get('/redirect', 'SocialAuthGoogleController@redirect');
+Route::get('/callback', 'SocialAuthGoogleController@callback');
+Route::get('/home', 'HomeController@index')->name('home');
